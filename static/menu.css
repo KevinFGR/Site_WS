@@ -1,0 +1,56 @@
+*{
+    margin:0;
+    font-family: Helvetica;
+}
+body{
+    background-color: #eee;
+}
+header{
+    background-color:#13293d;
+    color:white;
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+button[name="sair"]{
+    margin-top:10%;
+    height:80%;
+    width:115%;
+    font-weight: bold;
+    border:0;
+    border-radius: 35%;
+}
+button[type=submit]{
+    background-color: #13293d;
+    border:0;
+}
+header div{
+    width:40%;
+}
+.pesquisa{
+    display:flex;
+}
+.pesquisa img{
+    vertical-align: middle;
+    max-height: 45px;
+}
+header input[type=text]{
+    width:150%;
+}
+.produto{
+    padding:2%;
+    max-height:250px;
+    width: 200px;
+    background-color:white;
+    margin:1%;
+    border-radius:0 0 10px 0;
+}
+.produto img{
+    max-height: 50%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.container{
+    display:flex;
+}

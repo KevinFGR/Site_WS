@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Administrativo</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='menuAdm.css')}}" />
+
+</head>
+<body>
+
+<header>
+        <h1>Menu para adminstradores </h1>
+        <div>
+            <a href="/loginAdm/"><button style="float:right;">Voltar</button></a>
+        </div>
+</header>
+
+<div class="conteudo">
+    <h2>Tabelas:</h2>
+    
+    <hr>
+    <div class="dados">
+        <div>
+            <h3>Administrador:</h3>
+            <p>Esta tabela guarda os registros referente aos administradores.</p>
+        </div>
+        <div>
+            <a href="/menuAdm/Administrador/"><button>Tabela</button></a>
+        </div>
+    </div>
+    <hr>
+    <div class="dados">
+
+        <div>
+            <h3>Carrinho:</h3>
+            <p>Esta tabela guarda os registros referente ao carrinho de cada cliente.</p>
+        </div>
+        <div>
+            <a href="/menuAdm/Carrinho/"><button>Tabela</button></a>
+        </div>
+    </div>
+    <hr>
+    <div class="dados">
+
+        <div>
+            <h3>Cliente:</h3>
+            <p>Esta tabela guarda os registros referente ao registro de cada cliente.</p>
+        </div>
+        <div>
+            <a href="/menuAdm/Cliente/"><button>Tabela</button></a>
+        </div>
+    </div>
+    <hr>
+    <div class="dados">
+
+        <div>
+            <h3>Favoritos:</h3>
+            <p>Esta tabela guarda os registros referente aos produtos que estão marcados como favoritos dos clientes.</p>
+        </div>
+        <div>
+            <a href="/menuAdm/Favoritos/"><button>Tabela</button></a>
+        </div>
+    </div>
+    <hr>
+    <div class="dados">
+
+        <div>
+            <h3>Item:</h3>
+            <p>Esta tabela guarda os registros referente ao items prestes a serem vendidos.</p>
+        </div>
+        <div>
+            <a href="/menuAdm/Item/"><button>Tabela</button></a>
+        </div>
+    </div>
+    <hr>
+    <div class="dados">
+
+        <div>
+            <h3>Produto:</h3>
+            <p>Esta tabela guarda os registros referente aos produtos a serem vendidos.</p>
+        </div>
+        <div>
+            <a href="/menuAdm/Produto/"><button>Tabela</button></a>
+        </div>
+    </div>
+    <hr>
+    <div class="dados">
+
+        <div>
+            <h3>Venda:</h3>
+            <p>Esta tabela guarda os registros referente às vendas realizadas.</p>
+        </div>
+        <div>
+            <a href="/menuAdm/Venda/"><button>Tabela</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

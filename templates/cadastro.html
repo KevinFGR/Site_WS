@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+    <title>Cadastrar</title>
+    <script>
+        function avalia(){
+            nome = document.formulario.nome.value;
+            endereco = document.formulario.endereco.value;
+            cpf = document.formulario.cpf.value;
+            email = document.formulario.email.value;
+            senha = document.formulario.senha.value;
+            senha2 = document.formulario.senha2.value;
+            lista = [nome,endereco,cpf,email,senha,senha2];
+            for(i = 0; i<lista.length; i++){
+                if (lista[i] == ""){
+                    return alert("Preencha rodos os dados");}
+            }
+            
+            if(senha == senha2){
+                return formulario.submit();}
+            else{
+                return alert("As senhas estão incorretas");}
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tela de cadastro</h1>
+        <a href="/"><button> Voltar </button></a>
+    </header>
+    <form action="/verificar/" method="post" name="formulario" >
+        <h2>Preencha com seus dados</h2>
+
+        <p>Nome:</p>
+        <input type="text" name="nome" placeholder="ex: Pessoa da Silva" autofocus/>
+
+        <p>Endereço:</p>
+        <input type="text" name="endereco" placeholder="ex: bairro, estado, nº, cidade" />
+ 
+        <p>Telefone:</p>
+        <input type="tel" name="telefone" placeholder="ex: 11999999999" />
+       
+        <p>CPF:</p>
+        <input type="text" name="cpf" placeholder="ex: 230.714.970-83" />
+  
+        <p>E-mail:</p>
+        <input type="mail" name="email" placeholder="ex: pessoa@gmail.com" />
+        
+        <p>Senha:</p>
+        <input type="password" name="senha" placeholder="ex:*****************" />
+        
+        <p>Confirme a senha</p>
+        <input type="password" name="senha2" placeholder="ex:*****************" />
+        
+        <div class="btn">
+            <input type="button" value="Cadastrar" onclick="avalia()" />
+        </div>    
+    
+    </form>
+</body>
+</html>
