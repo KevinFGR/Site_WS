@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='menu.css')}}" />
+    <title>Menu</title>
+    <script>
+        function produto(id){       
+            url = '/menu/'+id+'/'
+            window.location.href =url;
+            
+        }
+    </script> 
+</head>
+<body>
+    <header>
+        <h1>Torgon</h1>
+        <div>
+            <form action="/menu/pesquisar/" method="post" class="pesquisa">
+                <input type="text" placeholder="Pesquisar" name='pesquisa'/>
+                <button type="submit"><img src="{{url_for('static', filename='pesquisar.webp')}}" /></button>
+            </form>
+        </div>
+        <a href="/"><button name="sair">Sair</button></a>
+    </header>
+    <div class="container">
+        {% for prod in produtos %}
+        <div class="produto" onclick="produto( '{{prod[0]}}' )">
+            <h3>{{prod[1]}}</h3>
+            {% set img = prod[2]+'.jpg' %}
+            <img src="{{url_for('static', filename=img)}}" />
+            {% set x = ('%.2f' %(prod[3]))%}
+            <p>R${{x}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

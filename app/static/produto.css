@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    font-family: Helvetica;
+}
+body{
+    background-color:#eee;
+}
+header{
+    background-color:#13293d;
+    color:white;
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+button[name="sair"]{
+    margin-top:10%;
+    height:80%;
+    width:115%;
+    font-weight: bold;
+    border:0;
+    border-radius: 35%;
+}
+img{
+    width: 75%;
+}
+.info{
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+
+}
+.info div{
+    width:38%;
+    background-color:white;
+    padding:2%;
+}
+.info h2{
+    padding-top: 5%;
+}
+form input{
+    margin:5% 0 0 5px;
+    border:0;
+    background-color:#1b98e0;
+    height:60px;
+    color:white;
+    font-weight: bold;
+    font-size: large;
+}
+.preco{
+    margin:0;
+    margin-top:20px;
+    font-size: 20px;
+    padding:0;
+}
